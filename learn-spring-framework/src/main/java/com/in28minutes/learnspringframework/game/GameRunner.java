@@ -3,11 +3,11 @@ package com.in28minutes.learnspringframework.game;
 import org.springframework.stereotype.Component;
 
 @Component
-public class GamerRunner {
+public class GameRunner {
 	
 	private GamingConsole game;
 	
-	public GamerRunner(GamingConsole game) {
+	public GameRunner(GamingConsole game) {
 		this.game = game;
 	}
 	

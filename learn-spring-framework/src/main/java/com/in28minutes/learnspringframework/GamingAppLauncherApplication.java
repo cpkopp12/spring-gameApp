@@ -1,6 +1,6 @@
 package com.in28minutes.learnspringframework;
 
-import com.in28minutes.learnspringframework.game.GamerRunner;
+import com.in28minutes.learnspringframework.game.GameRunner;
 import com.in28minutes.learnspringframework.game.GamingConsole;
 //import com.in28minutes.learnspringframework.game.MarioGame;
 //import com.in28minutes.learnspringframework.game.SuperContraGame;
@@ -26,7 +26,7 @@ public class GamingAppLauncherApplication {
 			
 			context.getBean(GamingConsole.class).up();
 			
-			context.getBean(GamerRunner.class).run();
+			context.getBean(GameRunner.class).run();
 			
 		}
 
