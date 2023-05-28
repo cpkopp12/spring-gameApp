@@ -1,7 +1,7 @@
-package com.in28minutes.learnspringframework;
+package com.in28minutes.learnspringframework.examples.a0;
 
-import com.in28minutes.learnspringframework.game.GameRunner;
-import com.in28minutes.learnspringframework.game.GamingConsole;
+import java.util.Arrays;
+
 //import com.in28minutes.learnspringframework.game.MarioGame;
 //import com.in28minutes.learnspringframework.game.SuperContraGame;
 //import com.in28minutes.learnspringframework.game.PacmanGame;
@@ -14,19 +14,17 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
-@ComponentScan("com.in28minutes.learnspringframework.game")
-public class GamingAppLauncherApplication {
+@ComponentScan
+public class SimpleSpringContextLauncher {
 	
 	
 	public static void main(String[] args) {
 		
 		try(var context = 
 				new AnnotationConfigApplicationContext
-					(GamingAppLauncherApplication.class)) {
-			
-			context.getBean(GamingConsole.class).up();
-			
-			context.getBean(GameRunner.class).run();
+					(SimpleSpringContextLauncher.class)) {
+			Arrays.stream(context.getBeanDefinitionNames())
+				.forEach(System.out::println);
 			
 		}
 
